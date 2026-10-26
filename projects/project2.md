@@ -8,11 +8,19 @@ title: Project 2
 
 ## 1. Introduction
 
-Describe the project idea, its purpose, and the main objectives.
+The Event Counter project is supposed to be a digital circuit or software routine that tracks and records how many times a specific action or event occurs. The objectives of this project are:
+  - to design and implement sequential circuits in VHDL, including modulo-M counters and button event counters
+  - implement using configurable frequency dividers with VHDL generic and generic maps
+  - Implement and test counter-based applications on the Basys3 FPGA board using push buttons and 7-degment displays 
 
 ## 2. Design
 
-Explain the overall system design, including the major functional blocks and how they interact.
+Overall System Design: The system is a structural VHDL design that captures input triggers, increments a numeric tally, and displays the running total on physical hardware. It is designed to work in two modes: automatically counting every second using a clock, or manually counting every time a physical button is pressed.
+
+Major Functionals Blocks:
+1. Input Conditiong (Clock Divider/Debouncer)
+2. Modulo-M Counter
+3. Hex-to-7-Segment Decoder
 
 Include a labelled block diagram showing the system architecture.
 
@@ -42,7 +50,8 @@ For each scenario, explain:
 
 Include and discuss:
 
-- **Elaborated design:** Schematic and explanation
+- **Elaborated design:** <img width="1213" height="436" alt="image" src="https://github.com/user-attachments/assets/4eaaed22-5d21-42e5-9b83-36b998aadc69" />
+
 - **Synthesized design:** Schematic and explanation
 - **Implementation:** Implementation results and observations
 - **Resource utilization:** FPGA resource usage
