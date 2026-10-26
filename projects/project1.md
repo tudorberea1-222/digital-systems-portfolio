@@ -8,7 +8,7 @@ title: Project 1
 
 ## 1. Introduction
 
-Describe the project idea, its purpose, and the main objectives.
+The Car Seat Belt Warning System project focuses on designing, optimizing, and testing a digital control circuit that illuminates an alarm light based on automotive sensor inputs like ignition key status, seat pressure, and seat belt engagement. The objectives of the project are to be able to design a digital logic circuit for a car seat belt alarm using a traditional design approach and to execute the steps in the Xilinx design flow to implement the same circuit on FPGA.
 
 ## 2. Design
 
