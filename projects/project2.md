@@ -32,10 +32,9 @@ Part 1 and 2 files: [MP2Projectfiles (1).zip](https://github.com/user-attachment
 
 
 - **Design source:** 
-
  
  (Part 1) - Connects a 100 MHz clock divider (onesec), a 4-bit binary counter (ModM), and a 7-segment decoder (Hex7) to automatically increment the display exactly once per second
-                      (Part 2) - Modifies the counter logic by introducing an external push-button input as a gate/enable signal, forcing the system to increment only when the physical button is actively pressed
+ (Part 2) - Modifies the counter logic by introducing an external push-button input as a gate/enable signal, forcing the system to increment only when the physical button is actively pressed
 
 
 - **Testbench:** - Simulates the top level entity by generating a virtual 100 MHz input clock and toggle sequences for the reset and push button signals to verify counting boundaries before hardware implementation
