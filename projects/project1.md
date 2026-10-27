@@ -12,7 +12,17 @@ The Car Seat Belt Warning System project focuses on designing, optimizing, and t
 
 ## 2. Design
 
-Explain the overall system design, including the major functional blocks and how they interact.
+Door Warning Logic Block:
+ - Inputs Received: Key in ignition (K=1) and Door open (D=0)
+ - Function: Generates an internal door_warning signal if a driver leaves the car door open while the ignition key is inserted
+
+Seat-Belt Warning Logic Block:
+ - Inputs Received: Key in ignition (K=1), Person on seat (P=1), and Seat belt unfastened (S=0)
+ - Function: Generates an internal belt_warning signal if a passenger is detected sitting on the seat without their belt buckled while the car is running
+
+Output Priority & Interference Mixer:
+ - Warning Light (L): Combines both internal blocks via an OR logic condition. The warning light turns on if either safety violation occurs
+ - System Status Vector (STATUS): Uses conditional assignments to output a 2-bit diagnostic code (00 to 11) to your Basys3 LEDs, explicitly flagging exactly which safey hazard is active  
 
 Include a labelled block diagram showing the system architecture.
 
@@ -52,8 +62,9 @@ Include screenshots, tables, or photographs where appropriate.
 
 ## 6. Reflection
 
-Discuss:
-
-- Technical challenges encountered and how they were resolved
-- What you learned from the project
-- How the work relates to digital design concepts and theory covered in the course
+Technical Challenges & Resolutions:
+ - 
+What I Learned:
+ -
+Connection to Theory:
+ -
