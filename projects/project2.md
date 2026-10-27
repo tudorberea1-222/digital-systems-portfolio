@@ -30,11 +30,13 @@ Explain the key sections of your VHDL code and how they implement the required f
 
 Provide links to the relevant design files:
 
+Part 1 and 2 files: [MP2Projectfiles (1).zip](https://github.com/user-attachments/files/33997009/MP2Projectfiles.1.zip)
+
+
 - **Design source:** Part 1: [Link]
-                     Part 2: 
 - **Testbench:** [Link]
 - **Constraints (XDC):** [Link]
-[MP2Projectfiles.zip](https://github.com/user-attachments/files/33996115/MP2Projectfiles.zip)
+
 
 Include relevant code snippets where appropriate.
 
