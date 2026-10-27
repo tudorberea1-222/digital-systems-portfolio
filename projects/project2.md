@@ -54,8 +54,10 @@ Include and discuss:
 - **Elaborated design:** <img width="1213" height="436" alt="image" src="https://github.com/user-attachments/assets/4eaaed22-5d21-42e5-9b83-36b998aadc69" />
 
 - **Synthesized design:** <img width="171" height="237" alt="image" src="https://github.com/user-attachments/assets/20e7220c-d95c-4c5a-93cc-88b46df3bbb5" />
+
 The figure shows a close-up of the Vivado Device View after synthesis, verifying the physical pin assignments for the top level input ports. The design correctly instantiates the IPAD hardware primitives mapped to physical package pins B13 and A12.
 - **Implementation:** <img width="742" height="319" alt="image" src="https://github.com/user-attachments/assets/8934236a-5522-4860-b4c7-67b9c3e54af2" />
+
 The figure shows the final Implemented design floorplan. The cyan clusters in regions X0Y0 and X1Y0 represent the physical placement of the synthesized LUTs and flip flops within the FPGA fabric slices, establishing the spatial footprint of the design.
 - **Resource utilization:** FPGA resource usage
 - **Hardware testing:** Observed behaviour on the Basys3 board compared with expected functionality
