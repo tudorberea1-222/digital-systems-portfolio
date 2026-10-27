@@ -34,6 +34,7 @@ Provide links to the relevant design files:
                      Part 2: 
 - **Testbench:** [Link]
 - **Constraints (XDC):** [Link]
+[MP2Projectfiles.zip](https://github.com/user-attachments/files/33996115/MP2Projectfiles.zip)
 
 Include relevant code snippets where appropriate.
 
@@ -53,21 +54,39 @@ Include and discuss:
 
 - **Elaborated design:** <img width="1213" height="436" alt="image" src="https://github.com/user-attachments/assets/4eaaed22-5d21-42e5-9b83-36b998aadc69" />
 
+The figure shows the top-level RTL schematic of the design. The system clock feeds a clock divider module (clk_div) to generate a one-second enable signal. This signal drives a modulo-M counter module (modMCounter), whose 4-bit output simultaneously drives the diagnostic LEDs (leds) and a hexadecimal-to-7-segment decoder (hex_7seg) to drive the physical display outputs.
 - **Synthesized design:** <img width="171" height="237" alt="image" src="https://github.com/user-attachments/assets/20e7220c-d95c-4c5a-93cc-88b46df3bbb5" />
 
 The figure shows a close-up of the Vivado Device View after synthesis, verifying the physical pin assignments for the top level input ports. The design correctly instantiates the IPAD hardware primitives mapped to physical package pins B13 and A12.
 - **Implementation:** <img width="742" height="319" alt="image" src="https://github.com/user-attachments/assets/8934236a-5522-4860-b4c7-67b9c3e54af2" />
 
 The figure shows the final Implemented design floorplan. The cyan clusters in regions X0Y0 and X1Y0 represent the physical placement of the synthesized LUTs and flip flops within the FPGA fabric slices, establishing the spatial footprint of the design.
-- **Resource utilization:** FPGA resource usage
-- **Hardware testing:** Observed behaviour on the Basys3 board compared with expected functionality
+- **Resource utilization:** <img width="558" height="153" alt="image" src="https://github.com/user-attachments/assets/7603f0b6-9e0b-45f2-83f6-a7fc3d247a4a" />
 
-Include screenshots, tables, or photographs where appropriate.
+- **Hardware testing:**
+     Clock Divider (onesec) - Expected: To scale the 100 MHz board clock down to 1 Hz
+                              Observed: The display updated steadily exactly once per second
+
+     Counter Logic (ModM) - Expected: To count sequentially up to M-1 and instantly roll over to 0.
+                            Observed: The circuit successfully counted through the states in order and wrapped around cleanly without skipping numbers
+
+     Outputs (leds & sevenseg) - Expected: To show the binary value on 4 LEDs and the alphanumeric character on one digit of the 7-segment display.
+                                 Observed: The LEDs tracked the binary progression perfectly, and the display correctly illuminated matching numbers
+
+     Asynchronous Reset - Expected: To force the entire system back to zero immediately when pressed
+                        Observed: Pressing the Basys3 push button instantly cleared the LEDs, reset the display to '0', and releasing it resumed counting normally.
+
 
 ## 6. Reflection
 
-Discuss:
+Technical Challenges & Resolutions:
+- Display Anode Management: Initially, all four digits were active or blinking. Resolving this required forcing a static bit vector mask ("1110") directly to the anode port to lock logic down to a single display window
+- Active-Low Cathodes: The segment patterns origionally inverted what numbers should look like. This was resolved by adjusting the truth table logic inside the hex_7seg entity
 
-- Technical challenges encountered and how they were resolved
-- What you learned from the project
-- How the work relates to digital design concepts and theory covered in the course
+What I Learned:
+- Structural VHDL Realities: Component wiring relies completely on correctly configuring generic map boundaries alongside internal interconnect signals (count_sig, slow_clk)
+- Constraint Synchronization: Port names in structural code must precisely match the case-sensitive string handles declared in the active lines of the xdc files
+
+  Connection to Theory:
+- Sequential Networks: Applied multi stage clock division to orchestrate state updates across independent register slices
+- Combinational Mapping: Leveraged a static lookup architecture to continuously map 4-bit bus lines directly into a alphanumeric display structures
