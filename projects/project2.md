@@ -14,6 +14,7 @@ The Event Counter project is supposed to be a digital circuit or software routin
   - implement using configurable frequency dividers with VHDL generic and generic maps
   - Implement and test counter-based applications on the Basys3 FPGA board using push buttons and 7-degment displays 
 
+
 ## 2. Design
 
 Overall System Design: The system is a structural VHDL design that captures input triggers, increments a numeric tally, and displays the running total on physical hardware. It is designed to work in two modes: automatically counting every second using a clock, or manually counting every time a physical button is pressed.
@@ -23,25 +24,53 @@ Major Functionals Blocks:
 2. Modulo-M Counter
 3. Hex-to-7-Segment Decoder
 
-Include a labelled block diagram showing the system architecture.
+========================================================================================
+                                SYSTEM ARCHITECTURE DIAGRAM
+========================================================================================
+
+   EXTERNAL                                                            EXTERNAL
+    INPUTS                                                              OUTPUTS
+   ┌───────┐
+   │ clock ├───────────────┐
+   └───────┘               │
+   ┌───────┐               │     [ slow_clk ]
+   │ reset ├───┐           ▼       ( 1 Hz )         ┌──────────────┐
+   └───────┘   │     ┌───────────┐            ┌────►│  leds[3:0]   │
+               │     │  onesec   │            │     └──────────────┘
+               ├────►│ (clk_div) ├─────┐      │
+               │     └───────────┘     │      │     ┌──────────────┐
+               │                       ▼      │     │    Hex7      │    ┌──────────────┐
+               │                 ┌───────────┐│     │ (hex_7seg)   ├───►│sevenseg[6:0] │
+               └────────────────►│   ModM    ├┴────►│              │    └──────────────┘
+                                 │(counter)  │      └──────────────┘
+                                 └───────────┘
+                                   (4-bit)
+                                      ▲
+                                      │  [ count_sig[3:0] ]
+                                      │
+                                 ┌────┴──────┐                          ┌──────────────┐
+                                 │  "1110"   ├─────────────────────────►│  anode[3:0]  │
+                                 └───────────┘                          └──────────────┘
+                                (Static Mask)
+                                
+========================================================================================
 
 ## 3. Code
 
-Explain the key sections of your VHDL code and how they implement the required functionality.
-
-Provide links to the relevant design files:
 
 Part 1 and 2 files: [MP2Projectfiles (1).zip](https://github.com/user-attachments/files/33997009/MP2Projectfiles.1.zip)
 
 
-- **Design source:** Part 1: []
+- **Design source:** 
+
+ 
+ (Part 1) - Connects a 100 MHz clock divider (onesec), a 4-bit binary counter (ModM), and a 7-segment decoder (Hex7) to automatically increment the display exactly once per second
+                      (Part 2) - Modifies the counter logic by introducing an external push-button input as a gate/enable signal, forcing the system to increment only when the physical button is actively pressed
 
 
-- **Testbench:** [Link]
-- **Constraints (XDC):** [Link]
-
-
-Include relevant code snippets where appropriate.
+- **Testbench:** - Simulates the top level entity by generating a virtual 100 MHz input clock and toggle sequences for the reset and push button signals to verify counting boundaries before hardware implementation
+   
+- **Constraints (XDC):** - Maps the logical ports of the VHDL code (clock, reset, leds, sevenseg, anode) to the exact physical pins (W5, U18, U16, etc.) on the Basys3 hardware board.
 
 ## 4. Simulation
 
