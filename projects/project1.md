@@ -63,9 +63,13 @@ Include and discuss:
   
 - **Synthesized design:**
 
+<img width="458" height="459" alt="image" src="https://github.com/user-attachments/assets/cc022d2b-34ec-4579-9bff-fb00e86f832e" />
 
   
-- **Implementation:** Implementation results and observations
+- **Implementation:**
+
+
+
 - **Resource utilization:** FPGA resource usage
 - **Hardware testing:** Observed behaviour on the Basys3 board compared with expected functionality
 
