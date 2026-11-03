@@ -43,6 +43,10 @@ Include relevant code snippets where appropriate.
 Present simulation waveforms covering all required test scenarios.
 
 For each scenario, explain:
+
+<img width="1044" height="381" alt="image" src="https://github.com/user-attachments/assets/c0a1bdf7-0160-4590-98ea-79023fec60de" />
+
+
 - What was tested
 - Expected behaviour
 - Observed results
@@ -52,8 +56,15 @@ For each scenario, explain:
 
 Include and discuss:
 
-- **Elaborated design:** Schematic and explanation
-- **Synthesized design:** Schematic and explanation
+- **Elaborated design:**
+  
+<img width="1191" height="519" alt="image" src="https://github.com/user-attachments/assets/a701a95c-9f72-41ce-8232-947e64ebd752" />
+
+  
+- **Synthesized design:**
+
+
+  
 - **Implementation:** Implementation results and observations
 - **Resource utilization:** FPGA resource usage
 - **Hardware testing:** Observed behaviour on the Basys3 board compared with expected functionality
