@@ -33,7 +33,7 @@ Explain the key sections of your VHDL code and how they implement the required f
 
 Provide links to the relevant design files:
 
-- **Design source:** [Link]
+- **Design source:** [[Link]](https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_1/car_warnlight.vhd)
 - **Testbench:** [[Link]](https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_1/car_warnlight_tb.vhd)
 - **Constraints (XDC):** [[Link]](https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_1/car_warnlight.xdc)
 
