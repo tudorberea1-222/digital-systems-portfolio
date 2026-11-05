@@ -35,7 +35,7 @@ Provide links to the relevant design files:
 
 - **Design source:** [Link]
 - **Testbench:** [[Link]](https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_1/car_warnlight_tb.vhd)
-- **Constraints (XDC):** [Link]
+- **Constraints (XDC):** [[Link]](https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_1/car_warnlight.xdc)
 
 Include relevant code snippets where appropriate.
 
