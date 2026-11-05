@@ -68,9 +68,14 @@ Include and discuss:
   
 - **Implementation:**
 
+<img width="448" height="304" alt="image" src="https://github.com/user-attachments/assets/02933dfa-4624-4d76-b1d6-7a5e4ed7d4c3" />
 
 
-- **Resource utilization:** FPGA resource usage
+- **Resource utilization:**
+
+<img width="821" height="257" alt="image" src="https://github.com/user-attachments/assets/9992bfca-ed48-4c9f-b40e-a2480b4210f0" />
+
+
 - **Hardware testing:** Observed behaviour on the Basys3 board compared with expected functionality
 
 Include screenshots, tables, or photographs where appropriate.
