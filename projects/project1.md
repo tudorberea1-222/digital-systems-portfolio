@@ -48,7 +48,7 @@ For each scenario, explain:
 <img width="1044" height="381" alt="image" src="https://github.com/user-attachments/assets/c0a1bdf7-0160-4590-98ea-79023fec60de" />
 
 
-- What was tested
+- What was tested : The response of the system warning light (L) to all 16 possible permutations of the input sensors (D,K,P,S) as the testbench increments through binary states 0000 to 1111 (hex 0 to f).
 - Expected behaviour
 - Observed results
 - Any discrepancies and their resolution
