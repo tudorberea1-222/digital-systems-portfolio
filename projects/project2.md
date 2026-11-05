@@ -27,12 +27,9 @@ Major Functionals Blocks:
 <img width="1213" height="436" alt="image" src="https://github.com/user-attachments/assets/4eaaed22-5d21-42e5-9b83-36b998aadc69" />
 ## 3. Code
 
-
-Part 1 and 2 files: [MP2Projectfiles (1).zip](https://github.com/user-attachments/files/33997009/MP2Projectfiles.1.zip)
-
-
 - **Design source:** 
- 
+https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_2/button_debounce.vhd
+
  (Part 1) - Connects a 100 MHz clock divider (onesec), a 4-bit binary counter (ModM), and a 7-segment decoder (Hex7) to automatically increment the display exactly once per second
  (Part 2) - Modifies the counter logic by introducing an external push-button input as a gate/enable signal, forcing the system to increment only when the physical button is actively pressed
 
@@ -44,6 +41,9 @@ Part 1 and 2 files: [MP2Projectfiles (1).zip](https://github.com/user-attachment
 ## 4. Simulation
 
 Present simulation waveforms covering all required test scenarios.
+
+<img width="878" height="365" alt="image" src="https://github.com/user-attachments/assets/fd0a499a-34cb-4079-ac65-e37c2c397f8b" />
+
 
 For each scenario, explain:
 - What was tested
