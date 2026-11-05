@@ -24,7 +24,8 @@ Output Priority & Interference Mixer:
  - Warning Light (L): Combines both internal blocks via an OR logic condition. The warning light turns on if either safety violation occurs
  - System Status Vector (STATUS): Uses conditional assignments to output a 2-bit diagnostic code (00 to 11) to your Basys3 LEDs, explicitly flagging exactly which safey hazard is active  
 
-Include a labelled block diagram showing the system architecture.
+<img width="655" height="378" alt="image" src="https://github.com/user-attachments/assets/8d1e24de-0c05-44c2-af21-9ac3315f82c6" />
+
 
 ## 3. Code
 
