@@ -1,8 +1,7 @@
 
 
 ---
-layout: default
-title: Project 2
+ Project 2
 ---
 
 # Project 2: Event Counter
@@ -48,16 +47,15 @@ https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/
 
 ## 4. Simulation
 
-Present simulation waveforms covering all required test scenarios.
 
 <img width="878" height="365" alt="image" src="https://github.com/user-attachments/assets/fd0a499a-34cb-4079-ac65-e37c2c397f8b" />
 
 
 For each scenario, explain:
-- What was tested
-- Expected behaviour
-- Observed results
-- Any discrepancies and their resolution
+- What was tested : The overall structural integration of the debounced button evet trigger driving the 4-bit leds[3:0] modulo counter, the combinational sevenseg decoder, and the asynchronous reset signal
+- Expected behavior : Each rising edge of the button pulse should increment the count by 1 sequentially from 0 to 6 before wrapping cleanly back to 0 (Modulo-7 behavior). The sevenseg bus should update instantly with active low display patterns matching the state, and asserting reset should immediately clear the system back to zero 
+- Observed results : The simulation confirms perfect tracking: the counter steps cleanly through 0-->1-->2-->3-->4-->5-->6-->0.
+- Any discrepancies and their resolution : None.
 
 ## 5. Hardware
 
