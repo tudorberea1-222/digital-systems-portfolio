@@ -54,9 +54,9 @@ The VHDL code defines an entity with four sensor input ports (door_closed, key_i
   
 <img width="1191" height="519" alt="image" src="https://github.com/user-attachments/assets/a701a95c-9f72-41ce-8232-947e64ebd752" />
 
--Top Branch: Inverts door_closed and ANDs it with key_in to catch an open door hazard
--Bottom Branch: ANDS key_in, seat_pressure, and an inverted seat_belt_closed to catch an unbuckled passenger hazard
--Output: Feeds both hazard paths into a final OR gate to drive the master warning light (light_en)
+ - Top Branch: Inverts door_closed and ANDs it with key_in to catch an open door hazard
+ - Bottom Branch: ANDS key_in, seat_pressure, and an inverted seat_belt_closed to catch an unbuckled passenger hazard
+ - Output: Feeds both hazard paths into a final OR gate to drive the master warning light (light_en)
   
 - **Synthesized design:**
 
