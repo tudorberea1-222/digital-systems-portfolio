@@ -14,7 +14,7 @@ The Event Counter project is supposed to be a digital circuit or software routin
   - Implement and test counter-based applications on the Basys3 FPGA board using push buttons and 7-degment displays 
 
 
-## 2. Design
+2. Design
 
 Overall System Design: The system is a structural VHDL design that captures input triggers, increments a numeric tally, and displays the running total on physical hardware. It is designed to work in two modes: automatically counting every second using a clock, or manually counting every time a physical button is pressed.
 
@@ -24,7 +24,7 @@ Major Functionals Blocks:
 3. Hex-to-7-Segment Decoder
 
 <img width="1213" height="436" alt="image" src="https://github.com/user-attachments/assets/4eaaed22-5d21-42e5-9b83-36b998aadc69" />
-## 3. Code
+3. Code
 
 - **Design source:** 
 https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_2/button_debounce.vhd
