@@ -68,7 +68,8 @@ Output: Feeds both hazard paths into a final OR gate to drive the master warning
 
 <img width="458" height="459" alt="image" src="https://github.com/user-attachments/assets/cc022d2b-34ec-4579-9bff-fb00e86f832e" />
 
-
+I/O Buffers: It illustrates the mapping of system ports to specific physical silison input pads
+Hardware Routing: The block highlights primitive cells X0Y0 and X0Y1 assigned to package pins A12 and B13 to interface the digital logic directly with external circuitry
   
 - **Implementation:**
 
