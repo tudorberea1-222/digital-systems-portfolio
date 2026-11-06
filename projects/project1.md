@@ -1,7 +1,6 @@
 
 ---
-layout: default
-title: Project 1
+Project 1
 ---
 
 # Project 1: Car Seat Belt Warning System
