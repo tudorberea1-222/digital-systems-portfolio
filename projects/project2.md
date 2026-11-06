@@ -29,6 +29,7 @@ Major Functionals Blocks:
 
 - **Design source:** 
 https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_2/button_debounce.vhd
+https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_2/count_display.vhd
 
  (Part 1) - Connects a 100 MHz clock divider (onesec), a 4-bit binary counter (ModM), and a 7-segment decoder (Hex7) to automatically increment the display exactly once per second
  (Part 2) - Modifies the counter logic by introducing an external push-button input as a gate/enable signal, forcing the system to increment only when the physical button is actively pressed
