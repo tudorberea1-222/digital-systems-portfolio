@@ -35,6 +35,7 @@ https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/
 
 
 - **Testbench:** https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_2/clk_div_tb.vhd
+    http://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_2/modMcounter_tb.vhd
 
  Simulates the top level entity by generating a virtual 100 MHz input clock and toggle sequences for the reset and push button signals to verify counting boundaries before hardware implementation
    
