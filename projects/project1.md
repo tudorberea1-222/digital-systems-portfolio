@@ -62,26 +62,26 @@ The VHDL code defines an entity with four sensor input ports (door_closed, key_i
 
 <img width="458" height="459" alt="image" src="https://github.com/user-attachments/assets/cc022d2b-34ec-4579-9bff-fb00e86f832e" />
 
- -I/O Buffers: It illustrates the mapping of system ports to specific physical silison input pads
- -Hardware Routing: The block highlights primitive cells X0Y0 and X0Y1 assigned to package pins A12 and B13 to interface the digital logic directly with external circuitry
+ - I/O Buffers: It illustrates the mapping of system ports to specific physical silison input pads
+ - Hardware Routing: The block highlights primitive cells X0Y0 and X0Y1 assigned to package pins A12 and B13 to interface the digital logic directly with external circuitry
   
 - **Implementation:**
 
 <img width="448" height="304" alt="image" src="https://github.com/user-attachments/assets/02933dfa-4624-4d76-b1d6-7a5e4ed7d4c3" />
 
- -Placement & Routing: The device view displays the physical layout inside the FPGA chip, showing exactly where the circuit's gates are placed and how the copper traces are routed
- -I/O Ports: The green blocks on the left edge show the configured Input/Output blocks linked directly to the board's switches and LED
+ - Placement & Routing: The device view displays the physical layout inside the FPGA chip, showing exactly where the circuit's gates are placed and how the copper traces are routed
+ - I/O Ports: The green blocks on the left edge show the configured Input/Output blocks linked directly to the board's switches and LED
 
 - **Resource utilization:**
 
 <img width="821" height="257" alt="image" src="https://github.com/user-attachments/assets/9992bfca-ed48-4c9f-b40e-a2480b4210f0" />
 
- -Logic Elements: The design uses only 1 Slice LUT as combinational logic out of the 20,800 available
- -Hardware Pins: The design utilizes 5 bonded IOBs (4 input switches and 1 output LED) out of the 106 pins available
+ - Logic Elements: The design uses only 1 Slice LUT as combinational logic out of the 20,800 available
+ - Hardware Pins: The design utilizes 5 bonded IOBs (4 input switches and 1 output LED) out of the 106 pins available
 
 - **Hardware testing:** 
 
- -Physical Verification: Testing on the Basys3 board shows the sliding the designated switches triggers the green LED0 precisely as verified in the simulation. Flipping the door-open/key-in combination or the running/unbuckled-passenger combination immediately lights up the LED
+ - Physical Verification: Testing on the Basys3 board shows the sliding the designated switches triggers the green LED0 precisely as verified in the simulation. Flipping the door-open/key-in combination or the running/unbuckled-passenger combination immediately lights up the LED
 
 ## 6. Reflection
 
