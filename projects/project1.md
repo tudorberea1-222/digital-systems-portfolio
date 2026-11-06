@@ -48,10 +48,10 @@ For each scenario, explain:
 <img width="1044" height="381" alt="image" src="https://github.com/user-attachments/assets/c0a1bdf7-0160-4590-98ea-79023fec60de" />
 
 
-- What was tested : The response of the system warning light (L) to all 16 possible permutations of the input sensors (D,K,P,S) as the testbench increments through binary states 0000 to 1111 (hex 0 to f).
-- Expected behaviour
-- Observed results
-- Any discrepancies and their resolution
+- What was tested : The system's response when the ignition key is inserted (key_in = 1) while the car door is left open (door_closed = 0). This corresponds to binary states 0100 through 0111 (hex 4 to 7) between 200 ns and 400 ns.
+- Expected behavior : The internal door warning condition should evaluate to true because NOT(door_closed) AND key_in = 1 AND 1 = 1. Consequently, the master warning light must remain continuously HIGH (1) for this entire duration, regardless of the seat or belt sensor states. 
+- Observed results : As shown in the bottom waveform row, light_en transistions to HIGH exactly at 200 ns and remains a solid HIGH block until 400 ns.
+- Any discrepancies and their resolution : None. The hardware logic correctly prioritizes the door hazard warning across all four combinations.
 
 ## 5. Hardware
 
