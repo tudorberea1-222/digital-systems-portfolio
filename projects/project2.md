@@ -24,6 +24,7 @@ Major Functionals Blocks:
 3. Hex-to-7-Segment Decoder
 
 <img width="1213" height="436" alt="image" src="https://github.com/user-attachments/assets/4eaaed22-5d21-42e5-9b83-36b998aadc69" />
+
 ## 3. Code
 
 - **Design source:** 
