@@ -71,7 +71,9 @@ The figure shows a close-up of the Vivado Device View after synthesis, verifying
 - **Implementation:** <img width="742" height="319" alt="image" src="https://github.com/user-attachments/assets/8934236a-5522-4860-b4c7-67b9c3e54af2" />
 
 The figure shows the final Implemented design floorplan. The cyan clusters in regions X0Y0 and X1Y0 represent the physical placement of the synthesized LUTs and flip flops within the FPGA fabric slices, establishing the spatial footprint of the design.
-- **Resource utilization:** <img width="558" height="153" alt="image" src="https://github.com/user-attachments/assets/7603f0b6-9e0b-45f2-83f6-a7fc3d247a4a" />
+- **Resource utilization:**  <img width="558" height="153" alt="image" src="https://github.com/user-attachments/assets/7603f0b6-9e0b-45f2-83f6-a7fc3d247a4a" />
+
+The entire design is highly efficient, consuming less than 0.2% of the available FPGA fabric logic resources. The clock divider (onesec) is the largest block, utilizing 21 LUTs and 28 registers to handle the high bit width counter needed to divide the 100 MHz clock down to 1 Hz.
 
 - **Hardware testing:**
      Clock Divider (onesec) - Expected: To scale the 100 MHz board clock down to 1 Hz
