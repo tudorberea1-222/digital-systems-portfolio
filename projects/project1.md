@@ -88,7 +88,11 @@ The VHDL code defines an entity with four sensor input ports (door_closed, key_i
 Technical Challenges & Resolutions:
  - Pin Mapping Errors: Solved initial hardware mismatch by explicitly verifying switch and LED names against the Basys3 master XDC constraints file
  - Boolean Minimization: Resolved gate-overhead risks by using dataflow concurrent VHDL to let Vivado optimize the combinational expressions
+
 What I Learned:
+
  - Xilinx Design Flow: Gained hand-on experience navigating the complete toolchain from VHDL behavioral entry through synthesis and final hardware implementation
+
 Connection to Theory:
+
  - Combinatorial Logic: Applied core concepts of Boolean algebra, truth tables, and SOP expressions to solve a real-world multi-variable automotive safety problem
