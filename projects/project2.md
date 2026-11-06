@@ -36,7 +36,9 @@ https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/
 
 - **Testbench:** - Simulates the top level entity by generating a virtual 100 MHz input clock and toggle sequences for the reset and push button signals to verify counting boundaries before hardware implementation
    
-- **Constraints (XDC):** - Maps the logical ports of the VHDL code (clock, reset, leds, sevenseg, anode) to the exact physical pins (W5, U18, U16, etc.) on the Basys3 hardware board.
+- **Constraints (XDC):** https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_2/lab7.xdc
+
+ - Maps the logical ports of the VHDL code (clock, reset, leds, sevenseg, anode) to the exact physical pins (W5, U18, U16, etc.) on the Basys3 hardware board.
 
 ## 4. Simulation
 
