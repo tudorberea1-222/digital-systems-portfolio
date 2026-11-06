@@ -29,21 +29,15 @@ Output Priority & Interference Mixer:
 
 ## 3. Code
 
-Explain the key sections of your VHDL code and how they implement the required functionality.
-
-Provide links to the relevant design files:
+The VHDL code defines an entity with four sensor input ports (door_closed, key_in, seat_pressure, seat_belt_closed) and one output port (light_en) mapped via dataflow logic to trigger the warning light when a safety hazard is detected. The complete setup connects this hardware behavior to a binary sweep testbench and routes the signals directly to physical Basys3 FPGA board switches and LEDs
 
 - **Design source:** [[Link]](https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_1/car_warnlight.vhd)
 - **Testbench:** [[Link]](https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_1/car_warnlight_tb.vhd)
 - **Constraints (XDC):** [[Link]](https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_1/car_warnlight.xdc)
 
-Include relevant code snippets where appropriate.
+
 
 ## 4. Simulation
-
-Present simulation waveforms covering all required test scenarios.
-
-For each scenario, explain:
 
 <img width="1044" height="381" alt="image" src="https://github.com/user-attachments/assets/c0a1bdf7-0160-4590-98ea-79023fec60de" />
 
@@ -60,36 +54,41 @@ For each scenario, explain:
   
 <img width="1191" height="519" alt="image" src="https://github.com/user-attachments/assets/a701a95c-9f72-41ce-8232-947e64ebd752" />
 
-Top Branch: Inverts door_closed and ANDs it with key_in to catch an open door hazard
-Bottom Branch: ANDS key_in, seat_pressure, and an inverted seat_belt_closed to catch an unbuckled passenger hazard
-Output: Feeds both hazard paths into a final OR gate to drive the master warning light (light_en)
+-Top Branch: Inverts door_closed and ANDs it with key_in to catch an open door hazard
+-Bottom Branch: ANDS key_in, seat_pressure, and an inverted seat_belt_closed to catch an unbuckled passenger hazard
+-Output: Feeds both hazard paths into a final OR gate to drive the master warning light (light_en)
   
 - **Synthesized design:**
 
 <img width="458" height="459" alt="image" src="https://github.com/user-attachments/assets/cc022d2b-34ec-4579-9bff-fb00e86f832e" />
 
-I/O Buffers: It illustrates the mapping of system ports to specific physical silison input pads
-Hardware Routing: The block highlights primitive cells X0Y0 and X0Y1 assigned to package pins A12 and B13 to interface the digital logic directly with external circuitry
+-I/O Buffers: It illustrates the mapping of system ports to specific physical silison input pads
+-Hardware Routing: The block highlights primitive cells X0Y0 and X0Y1 assigned to package pins A12 and B13 to interface the digital logic directly with external circuitry
   
 - **Implementation:**
 
 <img width="448" height="304" alt="image" src="https://github.com/user-attachments/assets/02933dfa-4624-4d76-b1d6-7a5e4ed7d4c3" />
 
+-Placement & Routing: The device view displays the physical layout inside the FPGA chip, showing exactly where the circuit's gates are placed and how the copper traces are routed
+-I/O Ports: The green blocks on the left edge show the configured Input/Output blocks linked directly to the board's switches and LED
 
 - **Resource utilization:**
 
 <img width="821" height="257" alt="image" src="https://github.com/user-attachments/assets/9992bfca-ed48-4c9f-b40e-a2480b4210f0" />
 
+-Logic Elements: The design uses only 1 Slice LUT as combinational logic out of the 20,800 available
+-Hardware Pins: The design utilizes 5 bonded IOBs (4 input switches and 1 output LED) out of the 106 pins available
 
-- **Hardware testing:** Observed behaviour on the Basys3 board compared with expected functionality
+- **Hardware testing:** 
 
-Include screenshots, tables, or photographs where appropriate.
+-Physical Verification: Testing on the Basys3 board shows the sliding the designated switches triggers the green LED0 precisely as verified in the simulation. Flipping the door-open/key-in combination or the running/unbuckled-passenger combination immediately lights up the LED
 
 ## 6. Reflection
 
 Technical Challenges & Resolutions:
- - 
+ - Pin Mapping Errors: Solved initial hardware mismatch by explicitly verifying switch and LED names against the Basys3 master XDC constraints file
+ - Boolean Minimization: Resolved gate-overhead risks by using dataflow concurrent VHDL to let Vivado optimize the combinational expressions
 What I Learned:
- -
+ - Xilinx Design Flow: Gained hand-on experience navigating the complete toolchain from VHDL behavioral entry through synthesis and final hardware implementation
 Connection to Theory:
- -
+ - Combinatorial Logic: Applied core concepts of Boolean algebra, truth tables, and SOP expressions to solve a real-world multi-variable automotive safety problem
