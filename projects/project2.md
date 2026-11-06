@@ -34,11 +34,13 @@ https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/
  (Part 2) - Modifies the counter logic by introducing an external push-button input as a gate/enable signal, forcing the system to increment only when the physical button is actively pressed
 
 
-- **Testbench:** - Simulates the top level entity by generating a virtual 100 MHz input clock and toggle sequences for the reset and push button signals to verify counting boundaries before hardware implementation
+- **Testbench:** https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_2/clk_div_tb.vhd
+
+ Simulates the top level entity by generating a virtual 100 MHz input clock and toggle sequences for the reset and push button signals to verify counting boundaries before hardware implementation
    
 - **Constraints (XDC):** https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_2/lab7.xdc
 
- - Maps the logical ports of the VHDL code (clock, reset, leds, sevenseg, anode) to the exact physical pins (W5, U18, U16, etc.) on the Basys3 hardware board.
+ Maps the logical ports of the VHDL code (clock, reset, leds, sevenseg, anode) to the exact physical pins (W5, U18, U16, etc.) on the Basys3 hardware board.
 
 ## 4. Simulation
 
