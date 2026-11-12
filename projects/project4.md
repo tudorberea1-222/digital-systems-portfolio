@@ -8,7 +8,7 @@ title: Project 4
 
 ## 1. Introduction
 
-Describe the project idea, its purpose, and the main objectives.
+This project focuses on digital waveform synthesis using the Basys3 and an external Digital-to-Analog Converter (DAC). The purpose is to generate periodic analog signals like the sine, square, and triangle waves from digital logic and verify them on an oscilloscope. 
 
 ## 2. Design
 
