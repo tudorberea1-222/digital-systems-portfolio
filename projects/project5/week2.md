@@ -5,13 +5,11 @@
 
 Briefly introduce the audio acquisition and playback functions developed this week.
 
-During week 2, our team developed and verified real-time digital audio acquisition and playback on the Raspberry Pi Pico using C++ in Visual Studio Code with PlatformIO. We interfaced an I2S MEMS microphone for audio
+During week 2, our team developed and verified real-time digital audio acquisition and playback on the Raspberry Pi Pico using C++ in Visual Studio Code with PlatformIO. We interfaced an I2S MEMS microphone for audio capture and a MAX98357A Class-D I2S amplifier with a speaker for audio output, achieving continuous live microphone-to-speaker audio pass through at a 16 kHz sampling rate ahead of implementing our tremolo effect.
 
 ## 2. Design Summary
 
-Explain the microphone and DAC/amplifier connections, I²S pin assignments and configuration, and how audio samples move from input to output. Include a wiring diagram or link and identify important software functions or libraries. Avoid repeating the overall system architecture from the main page.
 
-[Summarize your work here and add links to supporting files.]
 
 ## 3. Testing and Results
 
