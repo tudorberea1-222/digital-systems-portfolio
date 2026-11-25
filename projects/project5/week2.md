@@ -1,12 +1,11 @@
 # Week 2 – Audio Interface Development
 
-[← Project 5 Main Page](../project5.md)
 
 ## 1. Introduction
 
 Briefly introduce the audio acquisition and playback functions developed this week.
 
-[Write a short paragraph here.]
+During week 2, our team developed and verified real-time digital audio acquisition and playback on the Raspberry Pi Pico using C++ in Visual Studio Code with PlatformIO. We interfaced an I2S MEMS microphone for audio
 
 ## 2. Design Summary
 
