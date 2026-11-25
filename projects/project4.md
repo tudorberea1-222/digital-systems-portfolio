@@ -52,7 +52,8 @@ Include and discuss:
 
 
   
-- **Synthesized design:** <img width="1127" height="829" alt="image" src="https://github.com/user-attachments/assets/e6cf592a-4dee-4a9d-97cc-d6662d185a96" />
+- **Synthesized design:** <img width="350" height="507" alt="image" src="https://github.com/user-attachments/assets/982896b2-5678-42a1-aa20-80bed104a9b9" />
+
 
   
   
