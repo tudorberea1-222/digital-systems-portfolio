@@ -12,9 +12,8 @@ This project focuses on digital waveform synthesis using the Basys3 and an exter
 
 ## 2. Design
 
-Explain the overall system design, including the major functional blocks and how they interact.
+<img width="1201" height="462" alt="image" src="https://github.com/user-attachments/assets/1a3145f3-5b9a-457e-8d4a-fe788af9a679" />
 
-Include a labelled block diagram showing the system architecture.
 
 ## 3. Code
 
@@ -30,7 +29,14 @@ Include relevant code snippets where appropriate.
 
 ## 4. Simulation
 
-Present simulation waveforms covering all required test scenarios.
+Sim 1:
+
+<img width="1186" height="338" alt="image" src="https://github.com/user-attachments/assets/2ed5159a-6c0b-436f-9c6c-8306b045f61b" />
+
+Sim 2:
+
+<img width="1191" height="586" alt="image" src="https://github.com/user-attachments/assets/cace29d3-9781-4354-9af0-0c5bf54ac885" />
+
 
 For each scenario, explain:
 - What was tested
@@ -42,10 +48,22 @@ For each scenario, explain:
 
 Include and discuss:
 
-- **Elaborated design:** Schematic and explanation
-- **Synthesized design:** Schematic and explanation
-- **Implementation:** Implementation results and observations
-- **Resource utilization:** FPGA resource usage
+- **Elaborated design:** <img width="1193" height="337" alt="image" src="https://github.com/user-attachments/assets/a99882e7-bef9-433f-a115-107c35dea09a" />
+
+
+  
+- **Synthesized design:** <img width="1127" height="829" alt="image" src="https://github.com/user-attachments/assets/e6cf592a-4dee-4a9d-97cc-d6662d185a96" />
+
+  
+  
+- **Implementation:** <img width="311" height="487" alt="image" src="https://github.com/user-attachments/assets/f258e998-1449-4f0f-bea9-db0ccc790cc2" />
+
+
+  
+- **Resource utilization:** <img width="772" height="357" alt="image" src="https://github.com/user-attachments/assets/5b9b940d-a5f0-465b-9c4a-1ef1a6cd8ce2" />
+
+
+  
 - **Hardware testing:** Observed behaviour on the Basys3 board compared with expected functionality
 
 Include screenshots, tables, or photographs where appropriate.
