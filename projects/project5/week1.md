@@ -1,6 +1,5 @@
 # Week 1 – System Setup and Environment Verification
 
-[← Project 5 Main Page](../project5.md)
 
 ## 1. Introduction
 
