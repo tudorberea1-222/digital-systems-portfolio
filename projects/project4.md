@@ -22,7 +22,7 @@ Explain the key sections of your VHDL code and how they implement the required f
 
 Provide links to the relevant design files:
 
-- **Design source:** [Link]
+- **Design source:** [https://github.com/tudorberea1-222/digital-systems-portfolio/blob/main/projects/project_4/wave_package.vhd]
 - **Testbench:** [Link]
 - **Constraints (XDC):** [Link]
 
